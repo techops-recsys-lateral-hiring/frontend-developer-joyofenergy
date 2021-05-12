@@ -1,17 +1,25 @@
-import { generateData } from "./generateData";
+import { generateReadings } from "./generateReadings";
 
-it("should generate 100 readings", () => {
-  expect(generateData(100).length).toBe(100);
+it("should generate N random readings", () => {
+  const n = 100;
+  expect(generateReadings(n).length).toBe(n);
 });
 
-it("should generate the same reading", () => {
-  const reading = 1337;
+it("should generate readings with timestamps and values", () => {
+  const reading = generateReadings(1)[0];
+
+  expect(typeof reading.time).toEqual("number");
+  expect(typeof reading.value).toEqual("number");
+})
+
+it("should optionally set the same value for all readings", () => {
+  const value = 1337;
   const length = 100;
-  const readings = generateData(length, reading);
+  const readings = generateReadings(length, value);
   expect(readings.length).toBe(length);
 
   const dataAllTheSame = readings.filter(
-    (item) => item.reading === reading
+    (item) => item.value === value
   );
 
   expect(dataAllTheSame.length).toBe(length);

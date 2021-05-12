@@ -8,15 +8,15 @@ const dateString = (utc) => {
 export const readingsByDay = (data) => {
     return data.reduce((curr, next) => {
         if (!curr[dateString(next.time)]) curr[dateString(next.time)] = 0;
-        curr[dateString(next.time)] += next.reading;
+        curr[dateString(next.time)] += next.value;
         return curr;
     }, {});
 };
 
 export const getSortedByTime = (data) => {
-    const tupleWithUTCTime = Object.entries(data).map(([key, value]) => [
-        Date.parse(key),
-        key,
+    const tupleWithUTCTime = Object.entries(data).map(([dateString, value]) => [
+        Date.parse(dateString),
+        dateString,
         value,
     ]);
 
