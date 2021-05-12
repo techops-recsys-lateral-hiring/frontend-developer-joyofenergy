@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="JOI Energy" />
+        <link rel="stylesheet" href="index.css" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css"
+        />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self' 'unsafe-inline' https://fonts.gstatic.com https://unpkg.com https://cdn.skypack.dev https://cdn.jsdelivr.net https://fonts.googleapis.com"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;800&display=swap"
+            rel="stylesheet"
+        />
+        <script src="index.js" type="module"></script>
+        <title>JOI Energy</title>
+    </head>
+    <body>
+        <div class="background shadow-2 flex overflow-hidden">
+            <div class="p3 menuWidth overflow-auto">
+                <div class="h2 greyBlue">⚡️ 1.4kW</div>
+                <p class="darkgray">Power draw</p>
+                <div class="h2 greyBlue">☀️️ 5.8kW</div>
+                <p class="darkgray">Solar power production</p>
+                <div class="h2 greyBlue">🔌️ 4.4kW</div>
+                <p class="darkgray">Fed into grid</p>
+                <div class="h5 bold darkgray mb2">Your devices:</div>
+                <div>
+                    <div class="shadow-2 roundedMore bg-super-light-grey mb1">
+                        <div class="darkgray pl2 pt1 pb1">Air conditioner</div>
+                        <div
+                            class="
+                                h5
+                                darkgray
+                                bold
+                                pl2
+                                pb1
+                                pt1
+                                bg-very-light-grey
+                            "
+                        >
+                            0.3093kW
+                        </div>
+                    </div>
+                    <div class="shadow-2 roundedMore bg-super-light-grey mb1">
+                        <div class="darkgray pl2 pt1 pb1">Wi-Fi router</div>
+                        <div
+                            class="
+                                h5
+                                darkgray
+                                bold
+                                pl2
+                                pb1
+                                pt1
+                                bg-very-light-grey
+                            "
+                        >
+                            0.0033kW
+                        </div>
+                    </div>
+                    <div class="shadow-2 roundedMore bg-super-light-grey mb1">
+                        <div class="darkgray pl2 pt1 pb1">Humidifer</div>
+                        <div
+                            class="
+                                h5
+                                darkgray
+                                bold
+                                pl2
+                                pb1
+                                pt1
+                                bg-very-light-grey
+                            "
+                        >
+                            0.0518kW
+                        </div>
+                    </div>
+                    <div class="shadow-2 roundedMore bg-super-light-grey mb1">
+                        <div class="darkgray pl2 pt1 pb1">Smart TV</div>
+                        <div
+                            class="
+                                h5
+                                darkgray
+                                bold
+                                pl2
+                                pb1
+                                pt1
+                                bg-very-light-grey
+                            "
+                        >
+                            0.1276kW
+                        </div>
+                    </div>
+                    <div class="shadow-2 roundedMore bg-super-light-grey mb1">
+                        <div class="darkgray pl2 pt1 pb1">Diffuser</div>
+                        <div
+                            class="
+                                h5
+                                darkgray
+                                bold
+                                pl2
+                                pb1
+                                pt1
+                                bg-very-light-grey
+                            "
+                        >
+                            0.0078kW
+                        </div>
+                    </div>
+                    <div class="shadow-2 roundedMore bg-super-light-grey mb1">
+                        <div class="darkgray pl2 pt1 pb1">Refrigerator</div>
+                        <div
+                            class="
+                                h5
+                                darkgray
+                                bold
+                                pl2
+                                pb1
+                                pt1
+                                bg-very-light-grey
+                            "
+                        >
+                            0.0923kW
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-very-light-grey p3 flex-auto overflow-auto">
+                <h1 class="regular darkgray line-height-1 mb3">
+                    Energy consumption
+                </h1>
+                <div class="mb3">
+                    <div
+                        class="
+                            h5
+                            inline-block
+                            shadow-2
+                            pl2
+                            pr2
+                            pt1
+                            pb1
+                            roundedMore
+                            mr2
+                            border-grey
+                            bg-blue
+                            white
+                            bold
+                        "
+                    >
+                        Last 30 days
+                    </div>
+                </div>
+                <div class="chartHeight mb3">
+                    <canvas id="usageChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
