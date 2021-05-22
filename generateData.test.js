@@ -10,7 +10,7 @@ it("should generate readings with timestamps and values", () => {
 
   expect(typeof reading.time).toEqual("number");
   expect(typeof reading.value).toEqual("number");
-})
+});
 
 it("should optionally set the same value for all readings", () => {
   const value = 1337;
@@ -18,9 +18,7 @@ it("should optionally set the same value for all readings", () => {
   const readings = generateReadings(length, value);
   expect(readings.length).toBe(length);
 
-  const dataAllTheSame = readings.filter(
-    (item) => item.value === value
-  );
+  const dataAllTheSame = readings.filter((item) => item.value === value);
 
   expect(dataAllTheSame.length).toBe(length);
 });

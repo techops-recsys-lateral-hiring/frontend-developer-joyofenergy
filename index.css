@@ -1,104 +1,100 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body,
 html {
-    margin: 0.5rem;
-    font-family: "Nunito", Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: rgb(235, 235, 235);
-    height: calc(100% - 1rem);
+  margin: 0.5rem;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(235, 235, 235);
+  height: calc(100% - 1rem);
 }
 
 p {
-    margin: 0 0 1.5rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
 .background {
-    border-radius: 1rem;
-    background-color: rgb(244, 249, 247);
-    height: 100%;
+  border-radius: 1rem;
+  background-color: rgb(244, 249, 247);
+  height: 100%;
 }
 
 .shadow-2 {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02),
-        0 4px 8px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.02),
-        0 16px 32px rgba(0, 0, 0, 0.02), 0 32px 64px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02),
+    0 4px 8px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.02),
+    0 16px 32px rgba(0, 0, 0, 0.02), 0 32px 64px rgba(0, 0, 0, 0.02);
 }
 
 .shadow-5 {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05),
-        0 4px 8px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.05),
-        0 16px 32px rgba(0, 0, 0, 0.05), 0 32px 64px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05),
+    0 4px 8px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.05),
+    0 16px 32px rgba(0, 0, 0, 0.05), 0 32px 64px rgba(0, 0, 0, 0.05);
 }
 
 .bg-very-light-grey {
-    background-color: rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
 }
 
 .bg-white {
-    background-color: white;
+  background-color: white;
 }
 
 .bg-silver {
-    background-color: rgb(230, 230, 245);
+  background-color: rgb(230, 230, 245);
 }
 
 .bg-blue {
-    background: linear-gradient(
-        0deg,
-        rgba(90, 142, 239, 1) 0%,
-        rgba(111, 162, 243, 1) 100%
-    );
+  background: linear-gradient(
+    0deg,
+    rgba(90, 142, 239, 1) 0%,
+    rgba(111, 162, 243, 1) 100%
+  );
 }
 
 .bg-light-grey {
-    background: linear-gradient(
-        0deg,
-        rgb(232, 232, 232) 0%,
-        rgb(255, 255, 255) 100%
-    );
+  background: linear-gradient(
+    0deg,
+    rgb(232, 232, 232) 0%,
+    rgb(255, 255, 255) 100%
+  );
 }
 
 .bg-super-light-grey {
-    background-color: rgb(245, 245, 245);
+  background-color: rgb(245, 245, 245);
 }
 
 .bg-green {
-    background: linear-gradient(
-        0deg,
-        rgb(73, 158, 71) 0%,
-        rgb(94, 212, 92) 100%
-    );
+  background: linear-gradient(0deg, rgb(73, 158, 71) 0%, rgb(94, 212, 92) 100%);
 }
 
 .white {
-    color: white;
+  color: white;
 }
 
 .darkgray {
-    color: rgb(109, 109, 109);
+  color: rgb(109, 109, 109);
 }
 
 .greyBlue {
-    color: rgb(130, 116, 182);
+  color: rgb(130, 116, 182);
 }
 
 .menuWidth {
-    min-width: 12rem;
+  min-width: 12rem;
 }
 
 .chartHeight {
-    height: 17rem;
+  height: 17rem;
 }
 
 .roundedMore {
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .border-grey {
-    border: 1px solid rgb(225, 225, 225);
+  border: 1px solid rgb(225, 225, 225);
 }
