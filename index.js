@@ -1,5 +1,4 @@
-import chart from "./chart.js";
-import { getSortedByTime, readingsByDay } from "./groupByDay.js";
-import { generateReadings } from "./generateReadings";
+import { createChart } from "./chart.js";
+import { getReadings, groupByDay, sortByTime } from "./reading";
 
-chart("usageChart", getSortedByTime(readingsByDay(generateReadings())).slice(-30));
+createChart("usageChart", sortByTime(groupByDay(getReadings())).slice(-30));
