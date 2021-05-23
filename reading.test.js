@@ -78,7 +78,7 @@ describe("#reading", function () {
   });
 
   describe("#sortByTime", () => {
-    test("should put latest reading to the last", () => {
+    it("should put latest reading to the last", () => {
       const readings = [
         { time: new Date(2021, 12, 17, 10, 24).getTime(), value: 50 },
         {
@@ -107,7 +107,7 @@ describe("#reading", function () {
       });
     });
 
-    test("should not change original array", () => {
+    it("should not change original array", () => {
       const readings = [
         { time: new Date(2021, 12, 17, 10, 24).getTime(), value: 50 },
         {

@@ -1,7 +1,7 @@
 import { formatDateLabel } from "./chart";
 
 describe("#chart formatDateLabel", () => {
-  test("should format date label", () => {
+  it("should format date label", () => {
     expect(formatDateLabel(new Date(2021, 0, 1).getTime())).toBe("01/01");
     expect(formatDateLabel(new Date(2021, 1, 1).getTime())).toBe("01/02");
     expect(formatDateLabel(new Date(2021, 5, 1).getTime())).toBe("01/06");
