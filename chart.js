@@ -1,15 +1,18 @@
-import * as chartJs from "https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.esm.js";
+import * as chartJs from "chart.js";
 
-const formatDateLabel = (date) => {
-  const parts = date.split("-");
+export const formatDateLabel = (timestamp) => {
+  const date = new Date(timestamp);
+  const month = date.getMonth();
+  const day = date.getDate();
 
-  const trim = (part) => {
-    return part.charAt(0) === "0" ? part.charAt(1) : part;
+  const formatPart = (value) => {
+    return value < 10 ? `0${value}` : `${value}`;
   };
-  return `${trim(parts[2])}/${trim(parts[1])}`;
+
+  return `${formatPart(day)}/${formatPart(month + 1)}`;
 };
 
-const createChart = (element, readings) => {
+export const createChart = (element, readings) => {
   chartJs.Chart.defaults.font.family = "Nunito";
   chartJs.Chart.defaults.font.size = "10px";
 
@@ -18,8 +21,8 @@ const createChart = (element, readings) => {
     Object.values(chartJs).filter((chartClass) => chartClass.id)
   );
 
-  const labels = readings.map((reading) => formatDateLabel(reading[1]));
-  const values = readings.map((reading) => reading[2]);
+  const labels = readings.map(({ time }) => formatDateLabel(time));
+  const values = readings.map(({ value }) => value);
 
   const data = {
     labels: labels,
@@ -62,5 +65,3 @@ const createChart = (element, readings) => {
     },
   });
 };
-
-export default createChart;

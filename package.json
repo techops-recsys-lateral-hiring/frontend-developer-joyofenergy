@@ -23,5 +23,8 @@
         ]
       }
     }
+  },
+  "dependencies": {
+    "chart.js": "^3.2.1"
   }
 }
