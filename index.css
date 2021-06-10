@@ -13,10 +13,6 @@ html {
   height: calc(100% - 1rem);
 }
 
-p {
-  margin: 0 0 1.5rem 0;
-}
-
 .background {
   border-radius: 1rem;
   background-color: rgb(244, 249, 247);
