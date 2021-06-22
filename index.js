@@ -1,4 +1,7 @@
-import { createChart } from "./chart.js";
+import { renderChart } from "./chart.js";
 import { getReadings, groupByDay, sortByTime } from "./reading";
 
-createChart("usageChart", sortByTime(groupByDay(getReadings())).slice(-30));
+window.onload = async () => {
+  const readings = await getReadings();
+  renderChart(sortByTime(groupByDay(readings)).slice(-30));
+};

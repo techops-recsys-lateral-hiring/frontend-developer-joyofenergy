@@ -2,20 +2,20 @@ import { getReadings, groupByDay, sortByTime } from "./reading";
 
 describe("#reading", function () {
   describe("#getReadings", () => {
-    it("should generate readings with specified length", () => {
+    it("should generate readings with specified length", async () => {
       const length = 100;
-      expect(getReadings(length)).toHaveLength(length);
+      expect(await getReadings(length)).toHaveLength(length);
     });
 
-    it("should generate readings with timestamps and random values", () => {
-      const reading = getReadings(1)[0];
+    it("should generate readings with timestamps and random values", async () => {
+      const reading = (await getReadings(1))[0];
 
       expect(typeof reading.time).toBe("number");
       expect(typeof reading.value).toBe("number");
     });
 
-    it("should generate readings by hours and ordered by time descending", () => {
-      const readings = getReadings(4);
+    it("should generate readings by hours and ordered by time descending", async () => {
+      const readings = await getReadings(4);
 
       expect(readings).toHaveLength(4);
       const OneHourInMilliseconds = 60 * 60 * 1000;
@@ -45,7 +45,7 @@ describe("#reading", function () {
       expect(typeof groupedReadings[0].value).toBe("number");
     });
 
-    it("should get readings grouped by day", () => {
+    it("should get readings grouped by day", async () => {
       const readings = [
         { time: new Date(2021, 12, 17, 10, 24).getTime(), value: 50 },
         {

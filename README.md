@@ -30,3 +30,8 @@ The application will launch at `http://localhost:8080`.
 ```console
 $ npm test
 ```
+
+### TypeScript
+
+TypeScript support is out-of-box.
+You can create *.ts files or import it into any of the existing files.
