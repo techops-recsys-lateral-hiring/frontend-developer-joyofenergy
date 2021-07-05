@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watchAll",
-    "start": "snowpack dev"
+    "start": "snowpack dev",
+    "format": "prettier -w ./*.js"
   },
   "contributors": [
     "Anish George",

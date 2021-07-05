@@ -1,6 +1,6 @@
 import * as chartJs from "chart.js";
 
-let chart = null;
+let chart;
 
 export const formatDateLabel = (timestamp) => {
   const date = new Date(timestamp);
