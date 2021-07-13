@@ -1,5 +1,7 @@
 import * as chartJs from "chart.js";
 
+let chart;
+
 export const formatDateLabel = (timestamp) => {
   const date = new Date(timestamp);
   const month = date.getMonth();
@@ -12,8 +14,7 @@ export const formatDateLabel = (timestamp) => {
   return `${formatPart(day)}/${formatPart(month + 1)}`;
 };
 
-export const createChart = (element, readings) => {
-  chartJs.Chart.defaults.font.family = "Nunito";
+export const renderChart = (readings) => {
   chartJs.Chart.defaults.font.size = "10px";
 
   chartJs.Chart.register.apply(
@@ -40,7 +41,11 @@ export const createChart = (element, readings) => {
     ],
   };
 
-  new chartJs.Chart(element, {
+  if (chart) {
+    chart.destroy();
+  }
+
+  chart = new chartJs.Chart("usageChart", {
     type: "bar",
     data: data,
     options: {

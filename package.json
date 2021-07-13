@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watchAll",
-    "start": "snowpack dev"
+    "start": "snowpack dev",
+    "format": "prettier -w ./*.js"
   },
   "contributors": [
     "Anish George",
@@ -18,10 +19,14 @@
     "Tuomas Nylund"
   ],
   "license": "ISC",
+  "engines": {
+    "node": "^14.16.1"
+  },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "@types/jest": "^26.0.19",
     "jest": "^26.6.3",
+    "prettier": "^2.3.1",
     "snowpack": "^3.2.2"
   },
   "babel": {
